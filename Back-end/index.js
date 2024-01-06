@@ -16,6 +16,7 @@ app.use(cors());
 app.use("/api/contacts", require("./routes/contactRouter"));
 app.use("/api/user", require("./routes/userRouter"));
 
+
 app.use(errorHandling);
 
 app.listen(port, () => console.log(`Server is running on port : ${port}`));
