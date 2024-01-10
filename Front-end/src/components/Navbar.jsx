@@ -1,12 +1,17 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem("authToken"));
+
+  const navigate = useNavigate()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
 
   return (
     <>
@@ -65,11 +70,18 @@ const Navbar = () => {
                 id="navbarDropdownMenuLink"
                 role="button"
                 aria-expanded="false"
-              >
-                <i className="fas fa-bell" />
-                <span className="badge rounded-pill badge-notification bg-danger">
-                  1
-                </span>
+              >{
+                isLoggedIn&&
+                <button onClick={()=> 
+                  {
+                    localStorage.removeItem("authToken")
+                    window.location.reload()
+                  }
+                    
+                  }><Link to='/login'>LOGOUT</Link></button>
+                
+                
+              }
               </a>
               <ul
                 className="dropdown-menu dropdown-menu-end"

@@ -6,7 +6,7 @@ import EditForm from "./EditForm";
 import { useState } from "react";
 import ConfirmDelete from "./ConfirmDelete";
 
-export const ContactCard = ({ name, phone, email, id ,refresh}) => {
+export const ContactCard = ({ name, phone, email, id, refresh }) => {
   const [showModal, setShowModal] = useState(false);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
 
@@ -52,20 +52,18 @@ export const ContactCard = ({ name, phone, email, id ,refresh}) => {
           />
         </div>
         <div className="flex justify-between">
-          <Button
-            content="Edit"
-            bgColor="blue-400"
-            textColor="black"
-            fun={() => {
-              setShowModal(true);
-            }}
-          />
-          <Button
-            content="Delete"
-            bgColor="red-500"
-            textColor="black"
-            fun={() => setShowDeleteModal(true)}
-          />
+          <button
+            className="bg-blue-400 text-black  px-4 py-2 mt-4 rounded-md"
+            onClick={() => setShowModal(true)}
+          >
+            Edit
+          </button>
+          <button
+            className="bg-red-500 text-black  px-4 py-2 mt-4 rounded-md"
+            onClick={() => setShowDeleteModal(true)}
+          >
+            Delete
+          </button>
         </div>
       </div>
 

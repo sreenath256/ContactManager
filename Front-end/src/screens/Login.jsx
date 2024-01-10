@@ -38,7 +38,7 @@ const Login = () => {
       console.log("Login Response is ", res);
 
       localStorage.setItem("authToken", res.data.token);
-      window.location.reload()
+      window.location.reload(false)
     } catch (err) {
       console.log(err);
     }
