@@ -135,7 +135,7 @@ export default function EditForm({
                       Close
                     </button>
                     <button
-                      className="bg-blue-500 text-white hover:bg-blue-500  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      className="bg-green-500 text-white hover:bg-green-600  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="submit"
                     >
                       Save Changes

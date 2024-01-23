@@ -51,12 +51,27 @@ const HomeScreen = () => {
               />
             );
           })
-          )}
-
+        )}
       </div>
-      
-      <button className="fixed right-4 bg-blue-500 text-white rounded-full w-20 h-20 bottom-28" onClick={()=>navigate('/add-contact')}>Add Contact</button>
 
+      <div class="fixed bottom-28 right-4 bg-blue-500 hover:bg-blue-600 p-2 rounded-full flex items-center space-x-2 cursor-pointer" onClick={()=>navigate('/add-contact')}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-6 h-6 text-white"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          ></path>
+        </svg>
+        <span class="text-white text-sm">Add Contact</span>
+      </div>
+      {/* <button className="fixed right-4 bg-blue-500 text-white rounded-full w-20 h-20 bottom-28" onClick={()=>navigate('/add-contact')}>Add Contact</button> */}
     </div>
   );
 };

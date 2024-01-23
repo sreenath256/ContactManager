@@ -18,7 +18,7 @@ const Navbar = () => {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         {/* Container wrapper */}
-        <div className="container-fluid">
+        <div className="container-fluid ml-24">
           {/* Toggle button */}
           <button
             data-mdb-collapse-init=""
@@ -72,7 +72,7 @@ const Navbar = () => {
                 aria-expanded="false"
               >{
                 isLoggedIn&&
-                <button onClick={()=> 
+                <button className="text-blue-600" onClick={()=> 
                   {
                     localStorage.removeItem("authToken")
                     window.location.reload()

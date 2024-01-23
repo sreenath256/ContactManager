@@ -29,6 +29,10 @@ const AddContactForm = () => {
     try{
 
       const res = await axios.post('contacts',formData)
+      if(res){
+
+        navigate('/')
+      }
     }catch(err){
       if(err.response.data.user===false){
         navigate('/login')
